@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C2C3A7D9-5D24-A36E-8E96-874C292EF5C7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
+    <CompilerResponseFile></CompilerResponseFile>
+    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityBuildTarget>Android:13</UnityBuildTarget>
+    <UnityVersion>5.4.1f1</UnityVersion>
+    <RootNamespace></RootNamespace>
+    <LangVersion Condition=" '$(VisualStudioVersion)' != '10.0' ">4</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Debug\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Debug\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_4_1;UNITY_5_4;UNITY_5;ENABLE_NEW_BUGREPORTER;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EDITOR_RETINA;ENABLE_RETINA_GUISTYLES;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_SPRITE_POLYGON;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;INCLUDE_PUBNUB;ENABLE_LOCALIZATION;ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION;ENABLE_EDITOR_TESTS_RUNNER;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_SUBSTANCE;UNITY_ANDROID_API;ENABLE_TEXTUREID_MAP;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;PLATFORM_SUPPORTS_ADS_ID;UNITY_CAN_SHOW_SPLASH_SCREEN;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;ENABLE_VSTU;UNITY_PRO_LICENSE</DefineConstants>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Release\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Release\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_4_1;UNITY_5_4;UNITY_5;ENABLE_NEW_BUGREPORTER;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EDITOR_RETINA;ENABLE_RETINA_GUISTYLES;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_SPRITE_POLYGON;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;INCLUDE_PUBNUB;ENABLE_LOCALIZATION;ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION;ENABLE_EDITOR_TESTS_RUNNER;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_SUBSTANCE;UNITY_ANDROID_API;ENABLE_TEXTUREID_MAP;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;PLATFORM_SUPPORTS_ADS_ID;UNITY_CAN_SHOW_SPLASH_SCREEN;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;ENABLE_VSTU;UNITY_PRO_LICENSE</DefineConstants>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="Boo.Lang" />
+    <Reference Include="UnityScript.Lang" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Excel">
+      <HintPath>Assets\MUnity\Plugins\ExcelDataReader\Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+      <HintPath>Assets\MUnity\Plugins\ExcelDataReader\System.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+      <HintPath>Assets\Plugins\DOTween\DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween43">
+      <HintPath>Assets\Plugins\DOTween\DOTween43.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween46">
+      <HintPath>Assets\Plugins\DOTween\DOTween46.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween50">
+      <HintPath>Assets\Plugins\DOTween\DOTween50.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="MUnity.CSharp.Plugins.csproj">
+      <Project>{2D5D14C5-1C50-1254-472B-68A95142D024}</Project>
+      <Name>MUnity.CSharp.Plugins</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Demo\Application\ApplicationDemo.cs" />
+    <Compile Include="Assets\Demo\AutoResetEvent\AutoResetEventTest.cs" />
+    <Compile Include="Assets\Demo\CodeDom\CodeDom.cs" />
+    <Compile Include="Assets\Demo\Coroutine\CoroutineManager.cs" />
+    <Compile Include="Assets\Demo\Coroutine\CoroutineTest.cs" />
+    <Compile Include="Assets\Demo\Coroutine\SimpleCoroutine.cs" />
+    <Compile Include="Assets\Demo\Dotween\DotweenDemo.cs" />
+    <Compile Include="Assets\Demo\DragonBone\HelloDragonBones.cs" />
+    <Compile Include="Assets\Demo\FindLoad\InitLoad.cs" />
+    <Compile Include="Assets\Demo\FindLoad\MainControl.cs" />
+    <Compile Include="Assets\Demo\FindLoad\Map.cs" />
+    <Compile Include="Assets\Demo\IfEditor\EditorDemo.cs" />
+    <Compile Include="Assets\Demo\Java\JavaDemo.cs" />
+    <Compile Include="Assets\Demo\Linq\LinqDemo.cs" />
+    <Compile Include="Assets\Demo\Mesh\BuildMesh.cs" />
+    <Compile Include="Assets\Demo\Message\MessageTest.cs" />
+    <Compile Include="Assets\Demo\Shader\Script\Clip.cs" />
+    <Compile Include="Assets\Demo\Socket\MarshalClient\MarshalClientDemo.cs" />
+    <Compile Include="Assets\Demo\Socket\ProtoClient\ProtoClientDemo.cs" />
+    <Compile Include="Assets\Demo\Socket\ProtoClient\Protos\MessageProto.cs" />
+    <Compile Include="Assets\Demo\Socket\StringClient\StringSocketDemo.cs" />
+    <Compile Include="Assets\Demo\Start\StartLoad.cs" />
+    <Compile Include="Assets\Demo\Time\TimeDemo.cs" />
+    <Compile Include="Assets\Demo\UGUI\ButtonDemo.cs" />
+    <Compile Include="Assets\Demo\UGUI\EventTriggerListener.cs" />
+    <Compile Include="Assets\Demo\UGUI\InputFieldDemo.cs" />
+    <Compile Include="Assets\Demo\UGUI\ScrollViewDemo.cs" />
+    <Compile Include="Assets\Demo\UGUI\SliderDemo.cs" />
+    <Compile Include="Assets\Demo\UGUI\ToggleDemo.cs" />
+    <Compile Include="Assets\Demo\UGUI\ViewPager.cs" />
+    <Compile Include="Assets\Demo\WWW\GetImage.cs" />
+    <Compile Include="Assets\MUnity\Core\Bundle.cs" />
+    <Compile Include="Assets\MUnity\Core\IManager.cs" />
+    <Compile Include="Assets\MUnity\Core\IModule.cs" />
+    <Compile Include="Assets\MUnity\Core\Module.cs" />
+    <Compile Include="Assets\MUnity\Core\ModuleManager.cs" />
+    <Compile Include="Assets\MUnity\Core\SceneManager.cs" />
+    <Compile Include="Assets\MUnity\Extention\StringExtension.cs" />
+    <Compile Include="Assets\MUnity\Os\Handler.cs" />
+    <Compile Include="Assets\MUnity\Os\Loom.cs" />
+    <Compile Include="Assets\MUnity\Os\Looper.cs" />
+    <Compile Include="Assets\MUnity\Os\Message.cs" />
+    <Compile Include="Assets\MUnity\Os\MessageQueue.cs" />
+    <Compile Include="Assets\MUnity\Plugins\LitJson\IJsonWrapper.cs" />
+    <Compile Include="Assets\MUnity\Plugins\LitJson\JsonData.cs" />
+    <Compile Include="Assets\MUnity\Plugins\LitJson\JsonException.cs" />
+    <Compile Include="Assets\MUnity\Plugins\LitJson\JsonMapper.cs" />
+    <Compile Include="Assets\MUnity\Plugins\LitJson\JsonMockWrapper.cs" />
+    <Compile Include="Assets\MUnity\Plugins\LitJson\JsonReader.cs" />
+    <Compile Include="Assets\MUnity\Plugins\LitJson\JsonWriter.cs" />
+    <Compile Include="Assets\MUnity\Plugins\LitJson\Lexer.cs" />
+    <Compile Include="Assets\MUnity\Plugins\LitJson\ParserToken.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\BclHelpers.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\BufferExtension.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\BufferPool.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\CallbackAttributes.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Compiler\CompilerContext.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Compiler\CompilerDelegates.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Compiler\Local.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\DataFormat.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Extensible.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\ExtensibleUtil.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\GlobalSuppressions.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Helpers.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\IExtensible.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\IExtension.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\ImplicitFields.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\KeyValuePairProxy.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Meta\AttributeMap.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Meta\BasicList.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Meta\CallbackSet.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Meta\MetaType.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Meta\RuntimeTypeModel.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Meta\SubType.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Meta\TypeFormatEventArgs.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Meta\TypeModel.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Meta\ValueMember.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\NetObjectCache.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\PrefixStyle.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Properties\AssemblyInfo.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\ProtoContractAttribute.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\ProtoConverterAttribute.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\ProtoEnumAttribute.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\ProtoException.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\ProtoIgnoreAttribute.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\ProtoIncludeAttribute.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\ProtoMemberAttribute.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\ProtoReader.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\ProtoWriter.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\SerializationContext.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Serializer.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Serializers\ArrayDecorator.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Serializers\BlobSerializer.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Serializers\BooleanSerializer.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Serializers\ByteSerializer.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Serializers\CharSerializer.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Serializers\CompiledSerializer.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Serializers\DateTimeSerializer.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Serializers\DecimalSerializer.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Serializers\DefaultValueDecorator.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Serializers\DoubleSerializer.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Serializers\EnumSerializer.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Serializers\FieldDecorator.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Serializers\GuidSerializer.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Serializers\IProtoSerializer.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Serializers\IProtoTypeSerializer.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Serializers\ISerializerProxy.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Serializers\ImmutableCollectionDecorator.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Serializers\Int16Serializer.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Serializers\Int32Serializer.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Serializers\Int64Serializer.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Serializers\KeyValuePairDecorator.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Serializers\ListDecorator.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Serializers\MemberSpecifiedDecorator.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Serializers\NetObjectSerializer.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Serializers\NullDecorator.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Serializers\ParseableSerializer.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Serializers\PropertyDecorator.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Serializers\ProtoDecoratorBase.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Serializers\ReflectedUriDecorator.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Serializers\SByteSerializer.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Serializers\SingleSerializer.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Serializers\StringSerializer.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Serializers\SubItemSerializer.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Serializers\SurrogateSerializer.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Serializers\SystemTypeSerializer.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Serializers\TagDecorator.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Serializers\TimeSpanSerializer.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Serializers\TupleSerializer.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Serializers\TypeSerializer.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Serializers\UInt16Serializer.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Serializers\UInt32Serializer.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Serializers\UInt64Serializer.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\Serializers\UriDecorator.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\ServiceModel\ProtoBehaviorAttribute.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\ServiceModel\ProtoBehaviorExtensionElement.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\ServiceModel\ProtoEndpointBehavior.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\ServiceModel\ProtoOperationBehavior.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\ServiceModel\XmlProtoSerializer.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\SubItemToken.cs" />
+    <Compile Include="Assets\MUnity\Plugins\protobuf-net\WireType.cs" />
+    <Compile Include="Assets\MUnity\Socket\AsyncMarshalClient.cs" />
+    <Compile Include="Assets\MUnity\Socket\AsyncMarshalServer.cs" />
+    <Compile Include="Assets\MUnity\Socket\AsyncProtoClient.cs" />
+    <Compile Include="Assets\MUnity\Socket\AsyncProtoServer.cs" />
+    <Compile Include="Assets\MUnity\Socket\AsyncSocketClient.cs" />
+    <Compile Include="Assets\MUnity\Socket\AsyncSocketServer.cs" />
+    <Compile Include="Assets\MUnity\Socket\AsyncStringClient.cs" />
+    <Compile Include="Assets\MUnity\Socket\AsyncStringServer.cs" />
+    <Compile Include="Assets\MUnity\Socket\IRequestHandler.cs" />
+    <Compile Include="Assets\MUnity\Socket\IResponseHandler.cs" />
+    <Compile Include="Assets\MUnity\Socket\ISocketClient.cs" />
+    <Compile Include="Assets\MUnity\Socket\ISocketServer.cs" />
+    <Compile Include="Assets\MUnity\Socket\MarshalBuffer.cs" />
+    <Compile Include="Assets\MUnity\Socket\RequestHandler.cs" />
+    <Compile Include="Assets\MUnity\Socket\ResponseHandler.cs" />
+    <Compile Include="Assets\MUnity\Socket\SocketClient.cs" />
+    <Compile Include="Assets\MUnity\Socket\SocketServer.cs" />
+    <Compile Include="Assets\MUnity\Utility\CsvUtility.cs" />
+    <Compile Include="Assets\MUnity\Utility\ExcelUtility.cs" />
+    <Compile Include="Assets\MUnity\Utility\MGUIUtility.cs" />
+    <Compile Include="Assets\MUnity\Utility\NetUtility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Demo\Shader\Shaders\Circle.shader" />
+    <None Include="Assets\Demo\Shader\Shaders\Clip.shader" />
+    <None Include="Assets\Demo\Shader\Shaders\Clip1.shader" />
+    <None Include="Assets\Demo\Shader\Shaders\Fog.shader" />
+    <None Include="Assets\Demo\Shader\Shaders\FogBlend.shader" />
+    <None Include="Assets\Demo\Shader\Shaders\FogFullScreen.shader" />
+    <None Include="Assets\Demo\Shader\Shaders\HalfAlpha.shader" />
+    <None Include="Assets\Demo\Shader\Shaders\MyCircle.shader" />
+    <None Include="Assets\Demo\Shader\Shaders\QueueBehind.shader" />
+    <None Include="Assets\Demo\Shader\Shaders\QueueFront.shader" />
+    <None Include="Assets\Demo\Shader\Shaders\WavesHorizontal.shader" />
+    <None Include="Assets\Demo\Shader\Shaders\WavesVertical.shader" />
+    <None Include="Assets\MUnity\Plugins\protobuf-net\Web\TODO.txt" />
+    <None Include="Assets\Plugins\DOTween\DOTween.XML" />
+    <None Include="Assets\Plugins\DOTween\DOTween43.xml" />
+    <None Include="Assets\Plugins\DOTween\DOTween46.xml" />
+    <None Include="Assets\Plugins\DOTween\DOTween50.xml" />
+    <None Include="Assets\Plugins\DOTween\Editor\DOTweenEditor.XML" />
+    <None Include="Assets\Plugins\DOTween\readme.txt" />
+    <None Include="Assets\Plugins\DragonBone\Shader\DragonBoneSimple.shader" />
+    <None Include="Assets\Plugins\DragonBone\Shader\DragonBoneSplitAlpha.shader" />
+    <None Include="Assets\Plugins\Spine\Examples\Spine\Dragon\dragon.atlas.txt" />
+    <None Include="Assets\Plugins\Spine\Examples\Spine\Dragon\license.txt" />
+    <None Include="Assets\Plugins\Spine\Examples\Spine\Eyes\eyes.atlas.txt" />
+    <None Include="Assets\Plugins\Spine\Examples\Spine\FootSoldier\Equipment\Equipment.atlas.txt" />
+    <None Include="Assets\Plugins\Spine\Examples\Spine\FootSoldier\FS_White.atlas.txt" />
+    <None Include="Assets\Plugins\Spine\Examples\Spine\FootSoldier\license.txt" />
+    <None Include="Assets\Plugins\Spine\Examples\Spine\Gauge\Gauge.atlas.txt" />
+    <None Include="Assets\Plugins\Spine\Examples\Spine\Goblins\goblins.atlas.txt" />
+    <None Include="Assets\Plugins\Spine\Examples\Spine\Hero\hero-mesh.atlas.txt" />
+    <None Include="Assets\Plugins\Spine\Examples\Spine\Hero\license.txt" />
+    <None Include="Assets\Plugins\Spine\Examples\Spine\Raggedy Spineboy\Raggedy Spineboy.atlas.txt" />
+    <None Include="Assets\Plugins\Spine\Examples\Spine\Raptor\raptor.atlas.txt" />
+    <None Include="Assets\Plugins\Spine\Examples\Spine\Spineboy\spineboy.atlas.txt" />
+    <None Include="Assets\Plugins\Spine\Examples\Spine\Spineunitygirl\Doi.atlas.txt" />
+    <None Include="Assets\Plugins\Spine\Spine-unity\Editor\Resources\SpineAssetDatabaseMarker.txt" />
+    <None Include="Assets\Plugins\Spine\Spine-unity\Modules\CustomMaterials\readme.txt" />
+    <None Include="Assets\Plugins\Spine\Spine-unity\Modules\Ghost\Shaders\SkeletonGhost.shader" />
+    <None Include="Assets\Plugins\Spine\Spine-unity\Modules\SkeletonGraphic\Shaders\SkeletonGraphic.shader" />
+    <None Include="Assets\Plugins\Spine\Spine-unity\Modules\SkeletonRenderSeparator\SkeletonRenderSeparator.txt" />
+    <None Include="Assets\Plugins\Spine\Spine-unity\Shaders\Bones.shader" />
+    <None Include="Assets\Plugins\Spine\Spine-unity\Shaders\HiddenPass.shader" />
+    <None Include="Assets\Plugins\Spine\Spine-unity\Shaders\Skeleton.shader" />
+    <None Include="Assets\Plugins\Spine\Spine-unity\Shaders\SkeletonLit.shader" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
+</Project>
