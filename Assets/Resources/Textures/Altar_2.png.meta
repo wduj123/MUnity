@@ -1,0 +1,107 @@
+fileFormatVersion: 2
+guid: d25cdecaa516f374485c2e2e3276a8ce
+timeCreated: 1477445033
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: jt_bg_2.png
+    21300002: jt_ckbg_1.png
+    21300004: jt_ckbg_2.png
+    21300006: jt_bg_2.
+    21300008: jt_ckbg_1.
+    21300010: jt_ckbg_2.
+    21300012: jt_bg_2
+    21300014: jt_ckbg_1
+    21300016: jt_ckbg_2
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: 1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: jt_bg_2
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 504
+        width: 874
+        height: 518
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: jt_ckbg_1
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 62
+        width: 348
+        height: 440
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 126, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: jt_ckbg_2
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 62
+        width: 348
+        height: 440
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    outline: []
+  spritePackingTag: tag
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

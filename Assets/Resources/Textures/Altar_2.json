@@ -1,0 +1,36 @@
+{"frames": {
+
+"jt_bg_2.png":
+{
+	"frame": {"x":2,"y":2,"w":874,"h":518},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":874,"h":518},
+	"sourceSize": {"w":874,"h":518}
+},
+"jt_ckbg_1.png":
+{
+	"frame": {"x":352,"y":522,"w":348,"h":440},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":440},
+	"sourceSize": {"w":348,"h":440}
+},
+"jt_ckbg_2.png":
+{
+	"frame": {"x":2,"y":522,"w":348,"h":440},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":440},
+	"sourceSize": {"w":348,"h":440}
+}},
+"meta": {
+	"app": "http://www.texturepacker.com",
+	"version": "1.0",
+	"image": "Altar_2.png",
+	"format": "RGBA8888",
+	"size": {"w":1024,"h":1024},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:98c494b554af948738fc47f9426466d9$"
+}
+}

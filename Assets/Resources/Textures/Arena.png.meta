@@ -1,0 +1,703 @@
+fileFormatVersion: 2
+guid: 0de80d4dc9804c2499de71390185c15c
+timeCreated: 1477445149
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: bwc_btwz
+    21300002: bwc_dzwz
+    21300004: bwc_gnan_1
+    21300006: bwc_gnan_2
+    21300008: bwc_gnanwz_1
+    21300010: bwc_gnanwz_2
+    21300012: bwc_gnanwz_3
+    21300014: bwc_icon
+    21300016: bwc_jsxx_mask
+    21300018: bwc_jsxxbg
+    21300020: bwc_sbbg
+    21300022: bwc_sbwz
+    21300024: bwc_slbg
+    21300026: bwc_slwz
+    21300028: bwc_swsd_btwz
+    21300030: bwc_xgwz_1
+    21300032: bwc_xgwz_2
+    21300034: bwc_xgwz_3
+    21300036: bwc_xxbg
+    21300038: bwc_xxlbg
+    21300040: bwc_zdjlbt
+    21300042: bwc_zlbg
+    21300044: bwc_zlicon
+    21300046: jpdb_bg
+    21300048: jpdb_ding
+    21300050: jpdb_dingmask
+    21300052: jpdb_jpbg
+    21300054: jpdb_jpslbg
+    21300056: jpdb_jsmask_1
+    21300058: jpdb_jsmask_2
+    21300060: jpdb_namebg
+    21300062: jpdb_sxan_1
+    21300064: jpdb_sxan_2
+    21300066: jpdb_sxanwz
+    21300068: jpdb_sycsbg
+    21300070: jpdb_txbg
+    21300072: jpdb_wsxan_1
+    21300074: jpdb_wsxan_2
+    21300076: jpdb_zran_1
+    21300078: jpdb_zran_2
+    21300080: jpicon_1
+    21300082: jpicon_2
+    21300084: jpicon_3
+    21300086: jpicon_4
+    21300088: jpicon_5
+    21300090: jpicon_6
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: 1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bwc_btwz
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 510
+        width: 148
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bwc_dzwz
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 256
+        width: 52
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bwc_gnan_1
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 3
+        width: 148
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bwc_gnan_2
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 3
+        width: 148
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bwc_gnanwz_1
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 811
+        width: 100
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bwc_gnanwz_2
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 735
+        width: 99
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bwc_gnanwz_3
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 773
+        width: 99
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bwc_icon
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 987
+        width: 31
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bwc_jsxx_mask
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 65
+        width: 199
+        height: 315
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bwc_jsxxbg
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 66
+        width: 199
+        height: 314
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bwc_sbbg
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 274
+        width: 204
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bwc_sbwz
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 320
+        width: 56
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bwc_slbg
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 916
+        width: 204
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bwc_slwz
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 359
+        width: 56
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bwc_swsd_btwz
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 541
+        width: 82
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bwc_xgwz_1
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 673
+        width: 95
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bwc_xgwz_2
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 289
+        width: 54
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bwc_xgwz_3
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 704
+        width: 95
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bwc_xxbg
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 930
+        width: 33
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bwc_xxlbg
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 2
+        width: 324
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bwc_zdjlbt
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 550
+        width: 126
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bwc_zlbg
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 72
+        width: 290
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bwc_zlicon
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 954
+        width: 35
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: jpdb_bg
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 382
+        width: 568
+        height: 640
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: jpdb_ding
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 657
+        width: 256
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: jpdb_dingmask
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 123
+        width: 256
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: jpdb_jpbg
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 454
+        width: 72
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: jpdb_jpslbg
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 956
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: jpdb_jsmask_1
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 398
+        width: 150
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: jpdb_jsmask_2
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 233
+        width: 165
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 63, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: jpdb_namebg
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 616
+        width: 165
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: jpdb_sxan_1
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 550
+        width: 137
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: jpdb_sxan_2
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 6
+        width: 137
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: jpdb_sxanwz
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 634
+        width: 91
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: jpdb_sycsbg
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 988
+        width: 45
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: jpdb_txbg
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 382
+        width: 127
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: jpdb_wsxan_1
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 569
+        width: 86
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: jpdb_wsxan_2
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 546
+        width: 86
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: jpdb_zran_1
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 848
+        width: 86
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: jpdb_zran_2
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 936
+        width: 86
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: jpicon_1
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 592
+        width: 67
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: jpicon_2
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 664
+        width: 67
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: jpicon_3
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 736
+        width: 67
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: jpicon_4
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 808
+        width: 67
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: jpicon_5
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 880
+        width: 67
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: jpicon_6
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 952
+        width: 67
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    outline: []
+  spritePackingTag: tag
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
