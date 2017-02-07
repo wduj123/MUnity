@@ -61,6 +61,31 @@ namespace MUnity.MEditor
             }
             EditorUtility.ClearProgressBar();
         }
+
+		[MenuItem("Assets/Excel/ExcelToFieldClass",false,0)]
+		public static void ExcelToFieldClass()
+		{
+
+		}
+
+		[MenuItem("Assets/Excel/ExcelToProtoClass",false,0)]
+		public static void ExcelToProtoClass()
+		{
+
+		}
+
+		[MenuItem("Assets/Excel/ExcelToFieldClass",true,0)]
+		[MenuItem("Assets/Excel/ExcelToProtoClass",true,0)]
+		public static bool CheckExcelSelection()
+		{
+			if (Selection.objects == null || Selection.objects.Length > 1)
+				return false;
+			Object obj = Selection.activeObject;
+			string path = AssetDatabase.GetAssetPath(obj);
+			if (!path.EndsWith (".xlsx"))
+				return false;
+			return true;
+		}
         #endregion
 
         #region MUnity
@@ -79,6 +104,8 @@ namespace MUnity.MEditor
             }
             EditorUtility.ClearProgressBar();
         }
+
+
 
         [MenuItem("MUnity/设置", false, 0)]
         public static void ShowSettingWindow()
