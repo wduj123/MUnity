@@ -119,7 +119,7 @@ namespace MUnity.Utility
 				if (!IsValidTable (dataTable))
 					continue;
 				this.validSheetCount += 1;
-				this.sheetDatas.Add (new SheetData ());
+				this.sheetDatas.Add (new SheetData (dataTable));
 			}
         }
 
