@@ -95,6 +95,10 @@
   <ItemGroup>
     <Compile Include="Assets\Demo\Application\ApplicationDemo.cs" />
     <Compile Include="Assets\Demo\AutoResetEvent\AutoResetEventTest.cs" />
+    <Compile Include="Assets\Demo\Bezier\BlinePointController.cs" />
+    <Compile Include="Assets\Demo\Bezier\BlineRenderer.cs" />
+    <Compile Include="Assets\Demo\Bezier\BlineRendererEditor.cs" />
+    <Compile Include="Assets\Demo\Bezier\Spline.cs" />
     <Compile Include="Assets\Demo\CodeDom\CodeDom.cs" />
     <Compile Include="Assets\Demo\Coroutine\CoroutineManager.cs" />
     <Compile Include="Assets\Demo\Coroutine\CoroutineTest.cs" />
@@ -114,6 +118,8 @@
     <Compile Include="Assets\Demo\Socket\ProtoClient\ProtoClientDemo.cs" />
     <Compile Include="Assets\Demo\Socket\ProtoClient\Protos\MessageProto.cs" />
     <Compile Include="Assets\Demo\Socket\StringClient\StringSocketDemo.cs" />
+    <Compile Include="Assets\Demo\SplineTrail\CatmullRomSpline.cs" />
+    <Compile Include="Assets\Demo\SplineTrail\SplineTrailRenderer.cs" />
     <Compile Include="Assets\Demo\Start\StartLoad.cs" />
     <Compile Include="Assets\Demo\Time\TimeDemo.cs" />
     <Compile Include="Assets\Demo\UGUI\ButtonDemo.cs" />
