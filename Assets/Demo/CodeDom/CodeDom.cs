@@ -19,71 +19,10 @@ using UnityEditor;
 
 public class CodeDom : MonoBehaviour
 {
-
     void Start()
     {
 
     }
-    //#region 主程序入口
-    /// <summary>
-    ///主程序入口 
-    /// </summary>
-    /// <param name = "args" ></ param >
-    //static void Main(string[] args)
-    //{
-    //    1 > 实例化C#代码服务提供对象
-    //    CSharpCodeProvider provider = new CSharpCodeProvider();
-    //    2 > 声明编译器参数
-    //    CompilerParameters parameters = new CompilerParameters();
-    //    parameters.GenerateExecutable = false;
-    //    parameters.GenerateInMemory = true;
-    //    try
-    //    {
-    //        3 > 动态编译
-    //        CompilerResults result = provider.CompileAssemblyFromSource(parameters, BuildCSharpCode());
-    //        if (result.Errors.Count > 0)
-    //        {
-    //            Console.Write("编译出错！");
-    //        }
-    //        4 > 如果编译没有出错，此刻已经生成动态程序集LCQ.LCQClass
-    //        5 > 开始玩C#映射
-    //        Assembly assembly = result.CompiledAssembly;
-    //        object obj = assembly.CreateInstance("LCQ.LCQClass");
-    //        Type type = assembly.GetType("LCQ.LCQClass");
-    //        6 > 获取对象方法
-    //        MethodInfo method = type.GetMethod("Sum");
-    //        object[] objParameters = new object[2] { 1, 5 };
-    //        int iResult = Convert.ToInt32(method.Invoke(obj, objParameters));//唤醒对象，执行行为
-    //        Console.Write(iResult);
-    //        Console.Read();
-    //    }
-    //    catch (System.NotImplementedException ex)
-    //    {
-    //        Console.Write(ex.Message);
-    //    }
-    //    catch (System.ArgumentException ex)
-    //    {
-    //        Console.Write(ex.Message);
-    //    }
-    //    catch (Exception ex)
-    //    {
-    //        Console.Write(ex.Message);
-    //    }
-    //}
-    //#endregion
-
-    //#region 生成代码块
-    /// <summary>
-    /// 生成代码块
-    /// </summary>
-    /// <returns></returns>
-    //private static string BuildCSharpCode()
-    //{
-    //    string fileName = AppDomain.CurrentDomain.BaseDirectory.Replace("Debug", string.Empty).Replace("Release", string.Empty) + "CodeFile.cs";
-    //    string strCodeDom = File.ReadAllText(fileName);
-    //    return strCodeDom;
-    //}
-    //#endregion
 }
 
 public class TestRunShell : ScriptableObject

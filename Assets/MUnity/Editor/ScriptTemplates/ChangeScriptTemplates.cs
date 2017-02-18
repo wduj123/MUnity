@@ -5,14 +5,16 @@ using MUnity.MEditor;
 
 public class ChangeScriptTemplates : UnityEditor.AssetModificationProcessor
 {
+
     // 添加脚本注释模板
-    private static string str =
-    "// ========================================================\r\n" +
+    private static string annotation = "// ========================================================\r\n";
+    private static string str = 
+    annotation +
     "// 描 述：#ScriptName# \r\n" + 
     "// 作 者：#CoderName# \r\n" + 
     "// 时 间：#CreateTime# \r\n" +
     "// 版 本：#UnityVersion# \r\n" +
-    "// ========================================================\r\n";
+    annotation;
 
     // 创建资源调用
     public static void OnWillCreateAsset(string path)
@@ -31,6 +33,8 @@ public class ChangeScriptTemplates : UnityEditor.AssetModificationProcessor
             allText = allText.Replace("#CreateTime#", System.DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss"));
             // 替换版本信息
             allText = allText.Replace("#UnityVersion#", Application.unityVersion);
+            string content = File.ReadAllText(path);
+            if (content.Contains(annotation)) return;
             File.WriteAllText(path, allText);
         }
     }
