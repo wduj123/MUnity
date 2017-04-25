@@ -4,13 +4,42 @@
 // 时 间：2017/01/02 19:09:31 
 // 版 本：5.4.1f1 
 // ========================================================
-using UnityEngine;
-using System.Collections;
 using System;
 using System.Collections.Generic;
 
-namespace MUnity.MEditor.MGenerator
+namespace MUnity.Editor.CodeGenerator
 {
+    
+    public enum AuthorityType
+    {
+        Default = 0,
+        Public,
+        Internal,
+        Private
+    }
+
+    public enum ClassDecorateType
+    {
+        Default = 0,
+        Abstract,
+    }
+
+    public enum MethodAuthorityType
+    {
+        Default = 0,
+        Public,
+        Internal,
+        Private
+    }
+
+    public enum MethodDecorateType
+    {
+        Default = 0,
+        Abstract,
+        Override,
+        Virtual
+    }
+
     public interface IClassGenerator
     {
         void SetNamespace(string name);
@@ -23,21 +52,15 @@ namespace MUnity.MEditor.MGenerator
 
         void SetUsingName(string[] usingName);
 
-        void SetAuthority(ClassAuthorityType type);
+        void SetAuthority(AuthorityType type);
 
         void SetDecorate(ClassDecorateType type);
 
         void AddMethod(IMethodGenerator method);
-
-        string ToString();
-
-        void ToClass(string path);
     }
 
     public interface IMethodGenerator
     {
-        string ToString();
-
         void SetMethodName(string name);
 
         void SetAuthority(MethodAuthorityType type);
@@ -49,28 +72,47 @@ namespace MUnity.MEditor.MGenerator
         void SetReturn(string returnType);
     }
 
-    public class ClassGernerator : IClassGenerator
+    public interface IPropertyGenerator
     {
-        const string CONTENT =
-            "#UsingNames#" + 
-            "#NamespaceBegin#" + 
-            "#Authority##DecorateType#class #ClassName##ExtendsName#\r\n" + 
-            "{\r\n" + 
-            "#MethodContent#\r\n" + 
-            "}\r\n" + 
-            "#NamespaceEnd#";
+        void SetPropertyName(string name);
 
-        const string AUTHORITY = "|public|internal|private";
-        const string DECORATE = "|abstract";
+        void SetAuthority(AuthorityType type);
+    }
 
-        string[] authorityTypes
+    public interface IFieldGenerator
+    {
+        void SetFieldName(string name);
+
+        void SetAuthority(AuthorityType type);
+    }
+
+    public class ClassGenerator : IClassGenerator
+    {
+        private const string CONTENT =
+@"#UsingNames#
+#NamespaceBegin#
+#CONTENT#
+#NamespaceEnd#";
+        private const string MAINCONTENT =
+@"#Authority##DecorateType#class #ClassName##ExtendsName#
+{
+#FieldContent##PropetyContent##MethodContent#
+}";
+        private const string USING =
+@"using #UsingName#;
+";
+        private const string AUTHORITY = "|public|internal|private";
+        private const string DECORATE = "|abstract";
+
+        public static string[] authorityTypes
         {
             get
             {
                 return AUTHORITY.Split('|');
             }
         }
-        string[] decorateTypes
+
+        private string[] decorateTypes
         {
             get
             {
@@ -78,19 +120,25 @@ namespace MUnity.MEditor.MGenerator
             }
         }
 
-        string m_name;
-        string m_baseName;
-        string m_content;
-        string[] m_interfaceNames;
-        string[] m_usingNames;
-        string m_namespace;
-        List<IMethodGenerator> m_methods;
-        ClassAuthorityType m_authorityType;
-        ClassDecorateType m_decorateType;
+        private string m_name;
+        private string m_baseName;
+        private string m_content;
+        private string m_mainContent;
+        private string[] m_interfaceNames;
+        private string[] m_usingNames;
+        private string m_namespace;
+        private List<IMethodGenerator> m_methods;
+        private List<IFieldGenerator> m_fields;
+        private List<IPropertyGenerator> m_properties;
+        private AuthorityType m_authorityType;
+        private ClassDecorateType m_decorateType;
 
-        public ClassGernerator(string className)
+        private ClassGenerator(){ }
+
+        public ClassGenerator(string className)
         {
             this.m_content = CONTENT;
+            this.m_mainContent = MAINCONTENT;
             this.m_name = className;
         }
 
@@ -100,7 +148,19 @@ namespace MUnity.MEditor.MGenerator
             this.m_methods.Add(method);
         }
 
-        public void SetAuthority(ClassAuthorityType type)
+        public void AddProperty(IPropertyGenerator property)
+        {
+            if (this.m_properties == null) this.m_properties = new List<IPropertyGenerator>();
+            this.m_properties.Add(property);
+        }
+
+        public void AddField(IFieldGenerator field)
+        {
+            if (this.m_fields == null) this.m_fields = new List<IFieldGenerator>();
+            this.m_fields.Add(field);
+        }
+
+        public void SetAuthority(AuthorityType type)
         {
             this.m_authorityType = type;
         }
@@ -135,21 +195,46 @@ namespace MUnity.MEditor.MGenerator
             this.m_usingNames = usingNames;
         }
 
+        public override string ToString()
+        {
+            this.m_mainContent = this.m_mainContent.Replace("#Authority#", GetAuthority(this.m_authorityType));
+            this.m_mainContent = this.m_mainContent.Replace("#DecorateType#", GetDecorate(this.m_decorateType));
+            this.m_mainContent = this.m_mainContent.Replace("#ClassName#", this.m_name);
+            this.m_mainContent = this.m_mainContent.Replace("#ExtendsName#", GetExtends(this.m_baseName, this.m_interfaceNames));
+            this.m_mainContent = this.m_mainContent.Replace("#MethodContent#", GetMethods(this.m_methods));
+            this.m_mainContent = this.m_mainContent.Replace("#PropetyContent#", GetProperties(this.m_properties));
+            this.m_mainContent = this.m_mainContent.Replace("#FieldContent#", GetFields(this.m_fields));
+            if(!IsNamespaceNullOrEmpty())
+            {
+                this.m_mainContent = RetractContent(this.m_mainContent);
+            }
+
+            this.m_content = this.m_content.Replace("#UsingNames#", GetUsingNames(this.m_usingNames));
+            this.m_content = this.m_content.Replace("#NamespaceBegin#", GetNamespace(this.m_namespace)[0]);
+            this.m_content = this.m_content.Replace("#NamespaceEnd#", GetNamespace(this.m_namespace)[1]);
+            this.m_content = this.m_content.Replace("#CONTENT#", this.m_mainContent);
+            return this.m_content;
+        }
+
+        string RetractContent(string content)
+        {
+            return "    " + content.Replace("\r\n", "\r\n    "); ;
+        }
+
         string GetUsingNames(string[] names)
         {
-            string useringNames = "";
+            string usingNames = "";
             if(names == null || names.Length < 1)
             {
-                return useringNames;
+                return usingNames;
             }
             else
             {
                 for(int i=0;i<names.Length;i++)
                 {
-                    useringNames += string.Format("using {0};\r\n", names[i]);
+                    usingNames += USING.Replace("#UsingName#", names[i]);
                 }
-                useringNames += "\r\n";
-                return useringNames;
+                return usingNames;
             }
         }
 
@@ -159,20 +244,20 @@ namespace MUnity.MEditor.MGenerator
             {
                 return new string[] { "", "" };
             }
-            string begin = string.Format("namespace {0}{1}\r\n", name,"{");
+            string begin = string.Format("namespace {0}{1}", name,"{");
             string end = "}";
             return new string[] { begin, end};
         }
 
-        string GetAuthority(ClassAuthorityType type)
+        string GetAuthority(AuthorityType type)
         {
-            if(type == ClassAuthorityType.Default)
+            if(type == AuthorityType.Default)
             {
                 return "";
             }
             else
             {
-                return this.authorityTypes[(int)type] + " ";
+                return authorityTypes[(int)type] + " ";
             }
         }
 
@@ -212,6 +297,44 @@ namespace MUnity.MEditor.MGenerator
             }
         }
 
+        string GetFields(List<IFieldGenerator> fields)
+        {
+            if (fields == null || fields.Count < 1) return "";
+            string fieldValue = "";
+            for (int i = 0; i < fields.Count; i++)
+            {
+                fieldValue += fields[i].ToString();
+                if (i != fields.Count - 1)
+                {
+                    fieldValue += "\r\n\r\n";
+                }
+                else if(!IsMethodNullOrEmpty() || !IsPropertyNullOrEmpty())
+                {
+                    fieldValue += "\r\n\r\n";
+                }
+            }
+            return fieldValue;
+        }
+
+        string GetProperties(List<IPropertyGenerator> properties)
+        {
+            if (properties == null || properties.Count < 1) return "";
+            string propetyValue = "";
+            for (int i = 0; i < properties.Count; i++)
+            {
+                propetyValue += properties[i].ToString();
+                if (i != properties.Count - 1)
+                {
+                    propetyValue += "\r\n\r\n";
+                }
+                else if(!IsMethodNullOrEmpty())
+                {
+                    propetyValue += "\r\n\r\n";
+                }
+            }
+            return propetyValue;
+        }
+
         string GetMethods(List<IMethodGenerator> methods)
         {
             if(methods == null || methods.Count < 1) return "";
@@ -219,63 +342,57 @@ namespace MUnity.MEditor.MGenerator
             for(int i=0;i<methods.Count;i++)
             {
                 methodValue += methods[i].ToString();
-                if (i != methods.Count - 1) methodValue += "\r\n";
+                methodValue = i != methods.Count - 1 ?  methodValue += "\r\n\r\n" : methodValue;
             }
             return methodValue;
         }
 
-        public override string ToString()
+        bool IsMethodNullOrEmpty()
         {
-            this.m_content = this.m_content.Replace("#UsingNames#", GetUsingNames(this.m_usingNames));
-            this.m_content = this.m_content.Replace("#NamespaceBegin#", GetNamespace(this.m_namespace)[0]);
-            this.m_content = this.m_content.Replace("#NamespaceEnd#", GetNamespace(this.m_namespace)[1]);
-            this.m_content = this.m_content.Replace("#Authority#", GetAuthority(this.m_authorityType));
-            this.m_content = this.m_content.Replace("#DecorateType#", GetDecorate(this.m_decorateType));
-            this.m_content = this.m_content.Replace("#ClassName#", this.m_name);
-            this.m_content = this.m_content.Replace("#ExtendsName#", GetExtends(this.m_baseName,this.m_interfaceNames));
-            this.m_content = this.m_content.Replace("#MethodContent#", GetMethods(this.m_methods));
-            return this.m_content;
+            return this.m_methods == null || this.m_methods.Count < 1 ? true : false;
         }
 
-        public void ToClass(string path)
+        bool IsPropertyNullOrEmpty()
         {
-            
+            return this.m_properties == null || this.m_properties.Count < 1 ? true : false;
+        }
+
+        bool IsNamespaceNullOrEmpty()
+        {
+            return string.IsNullOrEmpty(this.m_namespace);
         }
     }
 
     public class MethodGenerator : IMethodGenerator
     {
-        const string AUTHORITY = "|public|internal|private";
-        const string DECORATE = "|abstract|override|virtual";
-        const string CONTENT = "    #Authority##DecorateType##ReturnType# #MethodName#(#Parms#)#MethodContent#";
-        const string METHODCONTENT = 
-            "   \r\n" +
-            "   {\r\n" +
-            "      #ReturnValue#\r\n" +
-            "   }";
+        private const string DECORATE = @"|abstract|override|virtual";
+        private const string CONTENT = @"    #Authority##DecorateType##ReturnType# #MethodName#(#Parms#)#MethodContent#";
+        private const string METHODCONTENT = 
+@"
+    {
+        #ReturnValue#
+    }";
 
-        string m_content;
-        string m_methodContent;
+        private string m_content;
+        private string m_methodContent;
 
-        MethodAuthorityType m_authorityType = MethodAuthorityType.Default;
+        private MethodAuthorityType m_authorityType = MethodAuthorityType.Default;
 
-        MethodDecorateType m_decorateType = MethodDecorateType.Default;
+        private MethodDecorateType m_decorateType = MethodDecorateType.Default;
 
-        string[] m_parms;
+        private string[] m_parms;
 
-        string m_name;
+        private string m_name;
 
-        string m_returnType;
+        private string m_returnType;
 
-        string[] m_authorityTypes;
-        string[] m_decorateTypes;
+        private string[] m_decorateTypes;
 
         public MethodGenerator(string methodName)
         {
             this.m_name = methodName;
             this.m_content = CONTENT;
             this.m_methodContent = METHODCONTENT;
-            this.m_authorityTypes = AUTHORITY.Split('|');
             this.m_decorateTypes = DECORATE.Split('|');
         }
 
@@ -304,6 +421,17 @@ namespace MUnity.MEditor.MGenerator
             this.m_parms = parms;
         }
 
+        public override string ToString()
+        {
+            this.m_content = this.m_content.Replace("#Authority#", GetAuthority(this.m_authorityType));
+            this.m_content = this.m_content.Replace("#DecorateType#", GetDecorate(this.m_decorateType));
+            this.m_content = this.m_content.Replace("#ReturnType#", GetReturnType(this.m_returnType));
+            this.m_content = this.m_content.Replace("#MethodContent#", GetMethodContent(this.m_decorateType, this.m_returnType));
+            this.m_content = this.m_content.Replace("#MethodName#", this.m_name);
+            this.m_content = this.m_content.Replace("#Parms#", GetParms(this.m_parms));
+            return this.m_content;
+        }
+
         string GetReturn(string type)
         {
             string intValue = "Int32|int|double|Double|float|Single|";
@@ -321,11 +449,11 @@ namespace MUnity.MEditor.MGenerator
             string authorityValue = "";
             if (type == MethodAuthorityType.Default)
             {
-                authorityValue = this.m_authorityTypes[(int)type];
+                authorityValue = ClassGenerator.authorityTypes[(int)type];
             }
             else
             {
-                authorityValue = this.m_authorityTypes[(int)type] + " ";
+                authorityValue = ClassGenerator.authorityTypes[(int)type] + " ";
             }
             return authorityValue;
         }
@@ -388,47 +516,95 @@ namespace MUnity.MEditor.MGenerator
             }
             return this.m_methodContent;
         }
+    }
+
+    public class PropertyGenerator : IPropertyGenerator
+    {
+        private string m_name;
+
+        public void SetAuthority(AuthorityType type)
+        {
+            
+        }
+
+        public void SetPropertyName(string name)
+        {
+            
+        }
 
         public override string ToString()
         {
-            this.m_content = this.m_content.Replace("#Authority#", GetAuthority(this.m_authorityType));
-            this.m_content = this.m_content.Replace("#DecorateType#", GetDecorate(this.m_decorateType));
-            this.m_content = this.m_content.Replace("#ReturnType#", GetReturnType(this.m_returnType));
-            this.m_content = this.m_content.Replace("#MethodContent#", GetMethodContent(this.m_decorateType,this.m_returnType));
-            this.m_content = this.m_content.Replace("#MethodName#", this.m_name);
-            this.m_content = this.m_content.Replace("#Parms#", GetParms(this.m_parms));
-            return this.m_content;
+            return null;
         }
     }
 
-    public enum MethodAuthorityType
+    public class FieldGenerator : IFieldGenerator
     {
-        Default = 0,
-        Public,
-        Internal,
-        Private
-    }
+        private const string CONTENT = @"    #Authority##ValueType# #Name#; #Annotation#";
 
-    public enum MethodDecorateType
-    {
-        Default = 0,
-        Abstract,
-        Override,
-        Virtual
-    }
+        private string m_content;
 
-    public enum ClassAuthorityType
-    {
-        Default = 0,
-        Public,
-        Internal,
-        Private
-    }
+        private AuthorityType m_authorityType = AuthorityType.Private;
 
-    public enum ClassDecorateType
-    {
-        Default = 0,
-        Abstract,
+        private string m_name;
+
+        private string m_valueType;
+
+        private string m_annotation;
+
+        public FieldGenerator()
+        {
+            this.m_content = CONTENT;
+        }
+
+        public void SetAuthority(AuthorityType type)
+        {
+            this.m_authorityType = type;
+        }
+
+        public void SetFieldName(string name)
+        {
+            this.m_name = name;
+        }
+
+        public void SetFieldType(string type)
+        {
+            this.m_valueType = type;
+        }
+
+        public void SetAnnotation(string annotation)
+        {
+            this.m_annotation = annotation;
+        }
+
+        public override string ToString()
+        {
+            this.m_content = this.m_content.Replace("#Authority#", GetAuthority());
+            this.m_content = this.m_content.Replace("#ValueType#", this.m_valueType);
+            this.m_content = this.m_content.Replace("#Name#", this.m_name);
+            this.m_content = this.m_content.Replace("#Annotation#", GetAnnotation());
+            return this.m_content;
+        }
+
+        string GetAuthority()
+        {
+            string authorityValue = "";
+            if (m_authorityType == AuthorityType.Default)
+            {
+                authorityValue = ClassGenerator.authorityTypes[(int)m_authorityType];
+            }
+            else
+            {
+                authorityValue = ClassGenerator.authorityTypes[(int)m_authorityType] + " ";
+            }
+            return authorityValue;
+        }
+
+        string GetAnnotation()
+        {
+            if (string.IsNullOrEmpty(this.m_annotation)) return "";
+            return "// " + this.m_annotation;
+        }
     }
 }
 

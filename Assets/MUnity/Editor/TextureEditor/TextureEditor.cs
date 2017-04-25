@@ -4,7 +4,7 @@ using UnityEditor;
 using System.Collections.Generic;
 using LitJson;
 
-namespace MUnity.MEditor
+namespace MUnity.Editor
 {
     public class TextureEditor : MonoBehaviour
     {

@@ -1,0 +1,19 @@
+ManifestFileVersion: 0
+CRC: 2730590418
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: a1816c5d6a6203236fb5bc0b101f2f41
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9dea23ffc7e96552740e12d1ee5309d8
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/Resources/Textures/gqxg_back_1.png
+- Assets/Resources/Textures/image4.png
+Dependencies: []

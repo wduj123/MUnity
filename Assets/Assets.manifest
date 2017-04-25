@@ -1,0 +1,10 @@
+ManifestFileVersion: 0
+CRC: 966051133
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: enemybundle1
+      Dependencies: {}
+    Info_1:
+      Name: herobundle1
+      Dependencies: {}

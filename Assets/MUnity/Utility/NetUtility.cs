@@ -3,7 +3,7 @@ using System.Collections;
 using System.Net;
 using System.Net.Sockets;
 
-namespace MUnity
+namespace MUnity.Utility
 {
     public class NetUitility
     {

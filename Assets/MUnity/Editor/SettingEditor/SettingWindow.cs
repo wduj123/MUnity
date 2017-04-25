@@ -8,7 +8,7 @@ using UnityEngine;
 using System.Collections;
 using UnityEditor;
 
-namespace MUnity.MEditor
+namespace MUnity.Editor
 {
     public class SettingWindow : EditorWindow
     {

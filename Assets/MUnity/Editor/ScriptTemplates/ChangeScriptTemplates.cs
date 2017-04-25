@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.IO;
-using MUnity.MEditor;
+using MUnity.Editor;
 
 public class ChangeScriptTemplates : UnityEditor.AssetModificationProcessor
 {
